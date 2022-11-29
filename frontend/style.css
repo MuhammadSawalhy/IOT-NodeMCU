@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #151515e5;
+}
+.main {
+    position: absolute;
+}
+#rangeValue {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 6em;
+    color: rgb(21, 68, 255);
+    font-weight: 400;
+    margin-top:30px;
+}
+.range {
+    width: min(90vw,400px);
+    height: 15px;
+    appearance: none;
+    background: #111;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+.range::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #00fd0a;
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px #00fd0a;
+}
+/* adding */
+.load {
+    display:flex;
+    width: min(90vw,400px);
+    
+    justify-content: space-between;
+
+}
+.load div{
+    margin:0 10px 270px;
+    background-color:#00fd0a;
+    width:min(100px,22.5vw);
+    text-align: center;
+    color:rgb(21, 68, 255);
+    font-weight: bold;
+    padding:10px;
+    /* animation */
+    animation-duration: 1.2s;
+    border-radius:20px;
+    animation-name: loading;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+} 
+.two {
+    animation-delay: .4s;
+}
+.three {
+    animation-delay:.8s;
+}
+@keyframes loading{
+to {
+    opacity:.2;
+    transform:translateY(-20px);
+}
+
+} 
+::selection {
+    background-color:rgba(128, 128, 128, 0.738);
+    color:rgb(0, 208, 255)
+}
